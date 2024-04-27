@@ -13,3 +13,16 @@ def my_function():
             print(i)
 my_function()
 
+# function with arguments
+def arguments_functions(a, b, c):
+    print(a)
+    print(b)
+    print(c)
+arguments_functions("Muhammad", "Abyan", "Kamal")
+
+# named parameters
+def show_name(firstname,lastname, middlename):
+    print(f"{firstname} {middlename} {lastname}")
+
+show_name(lastname="Kamal", firstname="Muhammad", middlename="Abyan")
+
