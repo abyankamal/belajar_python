@@ -3,11 +3,11 @@ from twilio.rest import Client
 
 OWM_URL = 'http://api.openweathermap.org/data/2.5/forecast'
 API_KEY = "3ca248996ffd7afcb72533875d5a3cbd"
-account_sid = "AC55d29c322eef608c27b7c26bcb1be6e8"
-auth_token = 'bf7bb5876323747f8fdce999b379e8fe'
+TWILIO_SID = "AC55d29c322eef608c27b7c26bcb1be6e8"
+TWILIO_AUTH_TOKEN = 'bf7bb5876323747f8fdce999b379e8fe'
 lat = -7.112330
 lng = 107.883890
-client = Client(account_sid, auth_token)
+client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
 
 weather_params = {
     "lat": lat,
