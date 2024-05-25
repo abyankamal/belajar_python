@@ -7,9 +7,9 @@ load_dotenv()
 
 # Your personal data. Used by Nutritionix to calculate calories.
 GENDER = "male"
-WEIGHT_KG = 84
-HEIGHT_CM = 180
-AGE = 32
+WEIGHT_KG = 65
+HEIGHT_CM = 163
+AGE = 22
 
 # Nutritionix APP ID and API Key. Actual values are stored as environment variables.
 APP_ID = os.environ["APP_ID"]
