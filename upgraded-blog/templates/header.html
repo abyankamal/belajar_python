@@ -9,6 +9,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Clean Blog - Start Bootstrap Theme</title>
+    {% block styles %}
+    <!-- Load Bootstrap-Flask CSS here -->
+    {{ bootstrap.load_css() }}
     <link
       rel="icon"
       type="image/x-icon"
@@ -35,12 +38,13 @@
       href="{{ url_for('static', filename='css/styles.css') }}"
       rel="stylesheet"
     />
+    {% endblock %}
   </head>
   <body>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
       <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <a class="navbar-brand" href="/">Start Bootstrap</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -56,7 +60,9 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto py-4 py-lg-0">
             <li class="nav-item">
-              <a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html"
+              <a
+                class="nav-link px-lg-3 py-3 py-lg-4"
+                href="{{ url_for('get_all_posts') }}"
                 >Home</a
               >
             </li>
@@ -78,5 +84,3 @@
         </div>
       </div>
     </nav>
-  </body>
-</html>
