@@ -10,11 +10,9 @@ for post in posts:
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def get_all_posts():
     return render_template("index.html", all_posts=post_objects)
-
 
 @app.route("/post/<int:index>")
 def show_post(index):
@@ -23,7 +21,6 @@ def show_post(index):
         if blog_post.id == index:
             requested_post = blog_post
     return render_template("post.html", post=requested_post)
-
 
 if __name__ == "__main__":
     app.run(debug=True)
